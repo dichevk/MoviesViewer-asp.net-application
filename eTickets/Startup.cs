@@ -26,7 +26,7 @@ namespace eTickets
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString");
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
