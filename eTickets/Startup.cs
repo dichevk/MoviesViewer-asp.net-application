@@ -51,7 +51,6 @@ namespace eTickets
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseAuthorization();
 
         }
     }
