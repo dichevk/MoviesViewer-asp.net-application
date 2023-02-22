@@ -51,6 +51,9 @@ namespace eTickets
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //Seed the database
+            AppDbInitializer.Seed(app);
+
 
         }
     }
