@@ -1,8 +1,8 @@
-﻿using eTickets.Models;
+﻿using MoviesViewer.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace eTickets.Controllers
+namespace MoviesViewer.Controllers
 {
     public class HomeController : Controller
     {

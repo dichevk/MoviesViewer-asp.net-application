@@ -1,4 +1,4 @@
-namespace eTickets.Models
+namespace MoviesViewer.Models
 {
     public class ErrorViewModel
     {

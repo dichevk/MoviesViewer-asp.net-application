@@ -1,7 +1,7 @@
-﻿using eTickets.Data.Enums;
-using eTickets.Models;
+﻿using MoviesViewer.Data.Enums;
+using MoviesViewer.Models;
 
-namespace eTickets.Data
+namespace MoviesViewer.Data
 {
     //used for dummy data, on startup, if there is no data, add dummy data
     public class AppDbInitializer

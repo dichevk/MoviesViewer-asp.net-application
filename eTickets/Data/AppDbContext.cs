@@ -1,7 +1,7 @@
-﻿using eTickets.Models;
+﻿using MoviesViewer.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace eTickets.Data
+namespace MoviesViewer.Data
 {
     public class AppDbContext : DbContext
     {

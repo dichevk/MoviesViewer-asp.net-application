@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace eTickets.Migrations
+namespace MoviesViewer.Migrations
 {
     public partial class Migration1 : Migration
     {

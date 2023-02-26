@@ -1,8 +1,8 @@
-﻿using eTickets.Data;
+﻿using MoviesViewer.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace eTickets.Controllers
+namespace MoviesViewer.Controllers
 {
     public class ProducersController : Controller
     {
@@ -16,7 +16,7 @@ namespace eTickets.Controllers
         public async Task<IActionResult> Index()
         {
             var producers = await _appDbContext.Producers.ToListAsync();
-            return View();
+            return View(producers);
         }
     }
 }

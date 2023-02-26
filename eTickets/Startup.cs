@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
-using eTickets.Data;
+using MoviesViewer.Data;
 
-namespace eTickets
+namespace MoviesViewer
 {
     public class Startup
     {

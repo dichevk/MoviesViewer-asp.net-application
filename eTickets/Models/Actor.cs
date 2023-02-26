@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace eTickets.Models
+namespace MoviesViewer.Models
 {
     public class Actor
     {

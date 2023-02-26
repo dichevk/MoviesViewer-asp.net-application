@@ -1,8 +1,8 @@
-﻿using eTickets.Data;
+﻿using MoviesViewer.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace eTickets.Controllers
+namespace MoviesViewer.Controllers
 {
     public class CinemasController : Controller
     {
@@ -15,7 +15,7 @@ namespace eTickets.Controllers
         public async Task<IActionResult> Index()
         {
             var cinemas = await _appDbContext.Cinemas.ToListAsync();
-            return View();
+            return View(cinemas);
         }
     }
 }

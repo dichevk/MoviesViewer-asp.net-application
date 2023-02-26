@@ -1,8 +1,8 @@
-﻿using eTickets.Data.Enums;
+﻿using MoviesViewer.Data.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace eTickets.Models
+namespace MoviesViewer.Models
 {
     public class Movie
     {
