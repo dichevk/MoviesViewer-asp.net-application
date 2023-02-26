@@ -6,8 +6,11 @@ namespace eTickets.Models
     {
         [Key]
         public int ActorId { get; set; }
+        [Display(Name = "Profile Picture URL")]
         public string? ProfilePictureUrl { get; set; }
-        public string? ActorName { get; set; } 
+        [Display(Name = "Actor's Name")]
+        public string? ActorName { get; set; }
+        [Display(Name = "Biography")]
         public string? Bio { get; set; }
 
         //Relationships 
