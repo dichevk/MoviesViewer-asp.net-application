@@ -14,7 +14,9 @@ namespace MoviesViewer.Controllers
     
         public async Task<IActionResult> Index()
         {
-            var movies = await _appDbContext.Movies.ToListAsync();
+            var movies = await _appDbContext.Movies
+                .Include(x => x.Cinema)
+                .ToListAsync();
             return View(movies);
         }
     }
