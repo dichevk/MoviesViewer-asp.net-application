@@ -16,6 +16,7 @@ namespace MoviesViewer.Controllers
         {
             var movies = await _appDbContext.Movies
                 .Include(x => x.Cinema)
+                .OrderBy(x => x.StartDate)
                 .ToListAsync();
             return View(movies);
         }

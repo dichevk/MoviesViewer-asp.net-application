@@ -13,7 +13,7 @@ namespace MoviesViewer.Controllers
             _appDbContext = appDbContext;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Producer()
         {
             var producers = await _appDbContext.Producers.ToListAsync();
             return View(producers);

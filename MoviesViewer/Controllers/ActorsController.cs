@@ -1,22 +1,28 @@
 ﻿using MoviesViewer.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MoviesViewer.Data.Services;
 
 namespace MoviesViewer.Controllers
 {
     public class ActorsController : Controller
     {
         //reference the AppDbContext file to be able to work with the data from the db
-        private readonly AppDbContext _context;
+        private readonly IActorsService _service;
 
-        public ActorsController(AppDbContext context)
+        public ActorsController(IActorsService service)
         {
-            _context = context;
+            _service = service;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Actors()
         {
-            var data = await _context.Actors.ToListAsync();
+            var data = await _service.GetActors();
             return View(data);
+        }
+        //GET Actors/Create 
+        public async Task<IActionResult> Create()
+        {
+            return View();
         }
     }
 }

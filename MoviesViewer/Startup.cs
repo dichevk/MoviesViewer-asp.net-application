@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using MoviesViewer.Data;
+using MoviesViewer.Data.Services;
 
 namespace MoviesViewer
 {
@@ -27,6 +28,8 @@ namespace MoviesViewer
             services.AddControllersWithViews();
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            services.AddScoped<IActorsService, ActorsService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
