@@ -3,6 +3,9 @@ using MoviesViewer.Models;
 
 namespace MoviesViewer.Data.Services
 {
+    /// <summary>
+    /// Cinmeas Service is used for the db communication for retrieving cinemas objects
+    /// </summary>
     public class CinemasService : ICinemasService
     {
         private readonly AppDbContext _context;
