@@ -1,4 +1,5 @@
-﻿using MoviesViewer.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using MoviesViewer.Models;
 
 namespace MoviesViewer.Data.Services
 {
@@ -21,14 +22,16 @@ namespace MoviesViewer.Data.Services
             throw new NotImplementedException();
         }
 
-        public Movie GetMovie(string id)
+        public async Task<Movie>GetMovie(Movie movie)
         {
-            throw new NotImplementedException();
+            var result = await _appDbContext.Movies.FindAsync(movie);
+            return result; 
         }
 
-        public Task<IEnumerable<Movie>> GetMovies()
+        public async Task<IEnumerable<Movie>> GetMovies()
         {
-            throw new NotImplementedException();
+            var result = await _appDbContext.Movies.ToListAsync();
+            return result;
         }
 
         public Movie UpdateMovie(string id, Movie newMovie)
