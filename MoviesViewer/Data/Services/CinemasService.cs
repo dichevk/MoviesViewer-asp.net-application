@@ -21,15 +21,27 @@ namespace MoviesViewer.Data.Services
         {
             throw new NotImplementedException();
         }
+
         public async Task<Cinema> GetCinema(Cinema cinema)
         {
             var result = await _context.Cinemas.FindAsync(cinema);
             return result;
         }
+
+        public async Task<Cinema> GetCinemaById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<Cinema>> GetCinemas()
         {
             var result = await _context.Cinemas.ToListAsync();
             return result;
+        }
+
+        public Cinema UpdateCinema(string id, Cinema cinema)
+        {
+            throw new NotImplementedException();
         }
     }
 }
