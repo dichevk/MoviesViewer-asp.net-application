@@ -5,7 +5,7 @@ namespace MoviesViewer.Models
     public class Cinema
     {
         [Key]
-        public int CinemaId { get; set; }
+        public string CinemaId { get; set; }
         [Display (Name = "Logo")]
         public string? Logo { get; set; }
         [Display(Name = "Name")]
