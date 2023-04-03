@@ -12,9 +12,11 @@ namespace MoviesViewer.Data.Services
             _appDbContext = appDbContext;
         }
 
-        public void AddMovie(Movie Movie)
+        public async void AddMovie(Movie Movie)
         {
-            throw new NotImplementedException();
+            var result = await _appDbContext.Movies.AddAsync(Movie);
+            _ = await _appDbContext.SaveChangesAsync();
+
         }
 
         public void DeleteMovie(string id)

@@ -10,9 +10,10 @@ namespace MoviesViewer.Data.Services
         {
             _context = context;
         }
-        public void AddProducer(Producer producer)
+        public async void AddProducer(Producer producer)
         {
-            throw new NotImplementedException();
+            var result = await _context.AddAsync(producer);
+            _ = await _context.SaveChangesAsync();
         }
 
         public void DeleteProducer(Producer producer)

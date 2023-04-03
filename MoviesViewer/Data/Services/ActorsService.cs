@@ -13,7 +13,7 @@ namespace MoviesViewer.Data.Services
         public async void AddActor(Actor actor)
         {
             var result = await _context.Actors.AddAsync(actor);
-            _context.SaveChanges();
+            _= await _context.SaveChangesAsync();
         }
 
         public void DeleteActor(string id)
@@ -38,7 +38,7 @@ namespace MoviesViewer.Data.Services
             throw new NotImplementedException();
         }
 
-        Task<Actor> IActorsService.GetActor(string id)
+        Task<Actor> IActorsService.GetActorById(string id)
         {
             throw new NotImplementedException();
         }

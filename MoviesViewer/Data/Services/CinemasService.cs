@@ -13,9 +13,10 @@ namespace MoviesViewer.Data.Services
         {
             _context = context;
         }
-        public void AddCinema(Cinema cinema)
+        public async void AddCinema(Cinema cinema)
         {
-            throw new NotImplementedException();
+            var result = await _context.Cinemas.AddAsync(cinema);
+           _= await _context.SaveChangesAsync();
         }
         public void DeleteCinema(Cinema cinema)
         {
