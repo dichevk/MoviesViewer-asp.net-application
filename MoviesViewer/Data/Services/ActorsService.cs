@@ -10,9 +10,10 @@ namespace MoviesViewer.Data.Services
         {
             _context = context;
         }
-        public void AddActor(Actor actor)
+        public async void AddActor(Actor actor)
         {
-            throw new NotImplementedException();
+            var result = await _context.Actors.AddAsync(actor);
+            _context.SaveChanges();
         }
 
         public void DeleteActor(string id)
@@ -20,9 +21,10 @@ namespace MoviesViewer.Data.Services
             throw new NotImplementedException();
         }
 
-        public Actor GetActor(string id)
+        public async Task<Actor> GetActor(Actor actor)
         {
-            throw new NotImplementedException();
+            var result = await _context.Actors.FindAsync(actor);
+            return result;
         }
 
         public async Task<IEnumerable<Actor>> GetActors()
@@ -32,6 +34,11 @@ namespace MoviesViewer.Data.Services
         }
 
         public Actor UpdateActor(string id, Actor newActor)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<Actor> IActorsService.GetActor(string id)
         {
             throw new NotImplementedException();
         }
