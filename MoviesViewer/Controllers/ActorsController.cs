@@ -7,7 +7,7 @@ namespace MoviesViewer.Controllers
 {
     public class ActorsController : Controller
     {
-        //reference the AppDbContext file to be able to work with the data from the db
+
         private readonly IActorsService _service;
 
         public ActorsController(IActorsService service)
