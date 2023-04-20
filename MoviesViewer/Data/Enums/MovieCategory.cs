@@ -8,6 +8,7 @@
         Documentary, 
         Horror, 
         Thriller,
+        Anime,
         Cartoon
     }
 }
